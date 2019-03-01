@@ -26,12 +26,15 @@
           <p class="mb-4 lead">Toutapanne vous est proposez par Toutatice et vous permet de diagnostiquer les éventuelles pannes présente sur les PC d'une salle.<br>Connectez-vous tout d'abord avec votre compte Toutatice , puis ensuite choisisez la salle ou le PC est déffectueux et par la suite choisisez le type de salle dans lequel vous vous trouvez.<br>Suivez le questionaire qui vous précisera le type de votre panne.</p>
         </div>
         <div class="p-5 col-md-5" style="">
-          <h3 class="mb-3">Connexion</h3>
-          <div class="form-group"> <label>Identifiant</label> <input type="Identifiant" class="form-control" placeholder="Identifiant"> <small class="form-text text-muted">Veuillez saisir votre identifiant.</small> </div>
-          <div class="form-group"> <label>Mot de passe</label> <input type="Motdepasse" class="form-control" placeholder="Mot de passe"> <small class="form-text text-muted">Veuillez saisir votre Mot de passe.</small></div>
-          <form class="">
-            <button type="submit" class="btn btn-primary" style="background-color:#F7BE81">Valider</button>
-          </form>
+        
+            <h3 class="mb-3">Connexion</h3>
+            <form action="testconnexion.php" method="post"> 
+              <div class="form-group"> <label for="identifiant">Identifiant</label> <input type="identifiant" class="form-control" name="identifiant" placeholder="Identifiant"> <small class="form-text text-muted">Veuillez saisir votre identifiant.</small> </div>
+              <div class="form-group"> <label for="password">Mot de passe*</label> <input type="password" class="form-control" name="password" placeholder="Mot de passe"> <small class="form-text text-muted">Veuillez saisir votre Mot de passe.</small></div>
+         <!-- <form class=""> -->
+            <button type="submit" class="btn btn-primary" style="background-color:#F7BE81">Valider</button> 
+            <!--<button type="submit" class="btn btn-primary btn-lg">Connexion</button>-->
+        </form>
         </div>
       </div>
     </div>
