@@ -11,7 +11,7 @@
 <body>
   <nav class="navbar navbar-dark bg-dark">
     <div class="container"> <a class="navbar-brand" href="#">
-      </a><a class="btn" href="#" style="background-color:#F7BE81;transform:  translateX(-1200px)">Toutapanne</a>
+      </a><a class="btn" href="#" style="background-color:#F7BE81;font-family: 'Amatic SC', cursive;transform:  translateX(-1200px)">Toutapanne</a>
     </div>
   </nav>
   <nav class="navbar navbar-light">
