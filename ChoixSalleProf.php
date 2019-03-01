@@ -1,3 +1,3 @@
 <?php
-    echo "Vous êtes une merde";
+    echo "Vous êtes un prof";
 ?>
