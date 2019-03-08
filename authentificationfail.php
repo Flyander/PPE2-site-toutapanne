@@ -21,7 +21,7 @@
     <div class="container">
       <div class="row">
         <div class="p-5 col-md-7 d-flex flex-column justify-content-center">
-          <h3 class="display-4 mb-3" style="">Toutapanne Test<br></h3>
+          <h3 class="display-4 mb-3" style="">Toutapanne<br></h3>
           <p class="mb-4 lead">Toutapanne vous est proposez par Toutatice et vous permet de diagnostiquer les éventuelles pannes présente sur les PC d'une salle.<br>Connectez-vous tout d'abord avec votre compte Toutatice , puis ensuite choisisez la salle ou le PC est déffectueux et par la suite choisisez le type de salle dans lequel vous vous trouvez.<br>Suivez le questionaire qui vous précisera le type de votre panne.</p>
         </div>
         <div class="p-5 col-md-5" style="">
