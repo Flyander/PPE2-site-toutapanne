@@ -1,0 +1,170 @@
+@keyframes grow {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 15%;
+    }
+}
+
+body,html {
+    background-color: white;
+}
+
+#container {
+    position: relative;
+    width: 50vw;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+input {
+    display: none;
+  }
+  
+  label {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border-radius: 0.4rem;
+    border: 2px solid black;
+    overflow: hidden;
+    box-shadow: -2px 0 8px 0 rgba(255, 255, 255, 0.6);
+  }
+  label div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #2f8ca5 35%, #067790);
+    height: 100%;
+    width: 0%;
+    animation: grow 2s forwards;
+    box-shadow: 0 0 8px 1px white inset;
+  }
+  label div:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(https://recursiveworlds.files.wordpress.com/2011/03/rain.gif?w=1400);
+    mix-blend-mode: overlay;
+    opacity: 0.5;
+  }
+  
+  span {
+    display: inline-block;
+    color: #4F9CC0;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 0.7rem;
+  }
+  span:last-child {
+    float: right;
+  }
+
+span:last-child {
+    float: right;
+}
+
+/*--------------------Bas page--------------------*/
+
+
+/*design div -------------------*/
+div.bas_page{
+	height: 450px;
+	background-color: #1D222F;
+}
+.bas_page ul{
+	float: left;
+}
+
+/*position FLD-----------------------*/
+.bas_page img{
+	width: 200px;
+	margin: 50px 50px 20px 0px;
+}
+
+/*text-------------------------------*/
+.bas_page li{
+	list-style-type: none;
+	color: white;
+}
+.bas_page li.num{
+	color: #F1096F;
+}
+
+/*Case-------------------------------------*/
+.bas_page .label{
+	background-color: rgb(61, 60, 63);
+	width: 300px;
+}
+.bas_page .label h4{
+	margin: 50px 0px 40px 0px;
+}
+.bas_page .label img{
+	width: 125px;
+	margin: 10px 0px;
+}
+
+/*Bouton-------------------------------*/
+.bas_page ul.contact{
+	margin: 50px 0px 0px 10%;
+}
+.bas_page a{
+	border: none;
+	border-radius: 0px;
+	padding: 15px 60px;
+	background-color: rgb(61, 60, 63);
+}
+.bas_page a:hover{
+	background-color: #F1096F;
+}
+
+/*Image gauche-------------------------------*/
+.bas_page ul.img_points{
+	float: right;
+}
+.bas_page ul.img_points img{
+	margin-top: 0px;
+}
+
+/*--------------------Fin Bas page--------------------*/
+
+
+
+
+
+
+
+/*------------------pied de page------------------*/
+div.pied{
+	text-align: center;
+	background-color: black;
+	height: 80px;
+	color: white;
+	padding-top: 30px;
+}
+
+.pied li{
+	list-style-type: none;
+	display: inline;
+
+}
+.pied a{
+	color: white;
+	transition: 0.3s;
+}
+
+.pied a:hover{
+	color:  #FF8000;
+	text-decoration: none;
+}
+
+/*------------------fin pied de page------------------*/

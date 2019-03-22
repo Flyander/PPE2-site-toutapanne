@@ -1,0 +1,63 @@
+/*--------------------Bas page--------------------*/
+
+
+/*design div -------------------*/
+div.bas_page{
+	height: 450px;
+	background-color: #1D222F;
+}
+.bas_page ul{
+	float: left;
+}
+
+/*position FLD-----------------------*/
+.bas_page img{
+	width: 200px;
+	margin: 50px 50px 20px 0px;
+}
+
+/*text-------------------------------*/
+.bas_page li{
+	list-style-type: none;
+	color: white;
+}
+.bas_page li.num{
+	color: #F1096F;
+}
+
+/*Case-------------------------------------*/
+.bas_page .label{
+	background-color: rgb(61, 60, 63);
+	width: 300px;
+}
+.bas_page .label h4{
+	margin: 50px 0px 40px 0px;
+}
+.bas_page .label img{
+	width: 125px;
+	margin: 10px 0px;
+}
+
+/*Bouton-------------------------------*/
+.bas_page ul.contact{
+	margin: 50px 0px 0px 10%;
+}
+.bas_page a{
+	border: none;
+	border-radius: 0px;
+	padding: 15px 60px;
+	background-color: rgb(61, 60, 63);
+}
+.bas_page a:hover{
+	background-color: #F1096F;
+}
+
+/*Image gauche-------------------------------*/
+.bas_page ul.img_points{
+	float: right;
+}
+.bas_page ul.img_points img{
+	margin-top: 0px;
+}
+
+/*--------------------Fin Bas page--------------------*/

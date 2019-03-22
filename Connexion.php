@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.2.1.css">
+  <link rel="stylesheet" style="text/css" href="footer.css" />
 </head>
 
 <body>
@@ -39,7 +40,43 @@
       </div>
     </div>
   </div>
-  <img src="bandeau bas.png">
+  <br><br><br><br><br><br>
+
+<!--______________Bas de page________________-->
+<div class="bas_page container-fluid">
+	<ul>
+		<li><img src="img/logo_fld.png"></li>
+		<li>Lycée Félix Le Dantec<br>
+			Rue des Cordiers • BP 80349<br>
+			22303 Lannion cedex
+		</li>
+		<li class="num">Tel. 02 96 05 61 71</li>
+	</ul>
+	<ul class="label">
+		<li><h4>ETABLISSEMENT LABELISE</h4></li>
+		<li><img src="img/academie_rennes.png"></li>
+		<li><img src="img/logo-erasmus.png"></li>
+		<li><img src="img/logo_campus_blanc.png"></li>
+	</ul>
+	<ul class="contact">
+		<li><a href="contact.html" class="btn btn-secondary"><h5>CONTACT & ACCES</h5></a></li>
+	</ul>
+	<ul class="img_points">
+		<li><img src="img/points.png"></li>
+	</ul>
+</div>
+<!--______________Fin Bas de page________________-->
+
+
+
+
+<!--______________pied de page________________-->
 </body>
 
 </html>
+
+<!--
+<div class="alert alert-danger">
+  <strong>Attention!</strong> Le mot de passe ou l'identifiant ne sont pas correct.
+/div>
+-->

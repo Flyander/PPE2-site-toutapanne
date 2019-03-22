@@ -36,7 +36,7 @@
                 echo "Valide";
                 $_SESSION['pseudo'] = $identifiant;
                 $_SESSION['connecte']='ok';
-                header('Location: ChoixSalleProf.php');
+                header('Location: Diagnostique.html');
                 $test = true; 
             }
         }
