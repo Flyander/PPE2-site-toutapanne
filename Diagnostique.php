@@ -1,3 +1,17 @@
+<?php
+    session_start();
+?>
+<?php
+    if (isset ($_SESSION['connecte']))
+    {}				
+    else
+    {
+        $_SESSION['connecte']= 'pasok';  
+    }				      
+    include("connexionbdd.php");              
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -12,14 +26,17 @@
   <link rel="stylesheet" style="text/css" href="test.css" />
 </head>
 
-<body style="">
+<body>
   <nav class="navbar navbar-dark bg-dark">
-    <div class="container"> <a class="navbar-brand" href="#">
-      </a><a class="btn" href="#" style="background-color:#F7BE81; transform:  translateX(-1200px)">Toutapanne</a>
+    <div class="container">
+      <ul class="nav navbar-nav navbar-right"> 
+        <a class="btn" style="color:white; transform: translateX(+1150px)"><i class="fa fa-user-circle-o" aria-hidden="true"></i><?php echo ' '.$_SESSION['pseudo']?></a>  <!-- affichage de la variable de session -->
+      </ul>
+      <a class="btn" style="color:white; transform: translateX(+725px)" href="disconnect.php"><i class="fa fa-power-off fa-lg" aria-hidden="true"></i></button></a>
+      <a class="btn" href="" style="background-color:#F7BE81; transform:  translateX(-1200px)">Toutapanne</a>
     </div>
   </nav>
   <img src="AC Rennes.jpg" height="200" width="200"><br><br><br><br><br><br>
-  
   <div id="container">
     <input type="checkbox" id="water" />
     <label for="water">
