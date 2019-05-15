@@ -9,6 +9,43 @@ div.bas_page{
 .bas_page ul{
 	float: left;
 }
+.choice{
+  display: inline-block;
+  width : 135px;
+  text-align: center;
+  border : 2px solid grey;
+  border-radius: 5px;
+  cursor: pointer;
+  padding : 5px;
+}
+.choice:hover{
+  border : 2px solid grey;
+  /*font-weight: bold;*/
+  background-color: rgb(10, 216, 20);
+  -webkit-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
+}
+
+
+#start{
+  display: inline-block;
+  transform: translateX(+500px);
+  width : 135px;
+  text-align: center;
+  border : 2px solid grey;
+  border-radius: 5px;
+  cursor: pointer;
+  padding : 5px;
+}
+#start:hover{
+  border : 2px solid grey;
+  background-color: #FF8000;
+  -webkit-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
+  /*font-weight: bold;*/
+}
 
 /*position FLD-----------------------*/
 .bas_page img{

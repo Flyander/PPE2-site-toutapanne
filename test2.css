@@ -25,8 +25,8 @@ li.section {
   overflow: hidden;
   text-overflow: ellipsis;
   min-width: 320px;
-    max-width: 1024px;
-    margin: 8px auto;
+  max-width: 1024px;
+   margin: 8px auto;
 }
 
 li.section:before {
@@ -77,6 +77,33 @@ li.section.visited.current:before {
 
 
 
+/*------------------Debut Salle Panne------------------------*/
+
+li {
+  display: inline;
+  list-style: none; /* pour enlever les puces sur IE7 */
+  margin: 50px;
+}
+li a {
+  display: inline-block;
+  width: 150px;
+  padding: 15px 10px;
+  text-decoration: none;
+  color: rgba(0,0,0);
+  font-weight: bold;
+  text-align: center;
+  border-style: solid;
+  border-width: medium;
+  transition: 0.3s;
+}
+
+li a:hover{
+  background-color:mediumseagreen;
+  color: white;
+}
+
+
+/*------------------Fin Salle Panne------------------------*/
 
 
 

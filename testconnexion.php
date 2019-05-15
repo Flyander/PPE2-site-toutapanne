@@ -7,9 +7,9 @@
 
         $MdpCrypt = password_hash($password, PASSWORD_DEFAULT);
 
-        $Requete = $connexion->prepare('SELECT mdp_T as mdp, \'Admin\' as type FROM technicien where identifiant_T = :identifiant 
+        $Requete = $connexion->prepare('SELECT mdp_T as mdp, \'Admin\' as type, id_tech as id FROM technicien where identifiant_T = :identifiant 
                                         UNION 
-                                        SELECT mdp_P as mdp, \'Prof\' as type FROM prof WHERE identifiant_P = :identifiant'); //création des requetes SQL
+                                        SELECT mdp_P as mdp, \'Prof\' as type, id_prof as id FROM prof WHERE identifiant_P = :identifiant'); //création des requetes SQL
         
 
         $Requete->bindParam(':identifiant', $identifiant);
@@ -35,8 +35,9 @@
                 session_start();
                 echo "Valide";
                 $_SESSION['pseudo'] = $identifiant;
+                $_SESSION['id_prof'] = $Results["id"];
                 $_SESSION['connecte']='ok';
-                header('Location: Diagnostique.php');
+                header('Location: ChoixSalle.php');
                 $test = true; 
             }
         }

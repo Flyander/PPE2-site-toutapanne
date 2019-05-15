@@ -7,8 +7,10 @@
     else
     {
         $_SESSION['connecte']= 'pasok';  
-    }				      
-    include("connexionbdd.php");              
+    }
+    include("connexionbdd.php");
+     
+    $_SESSION['id'] = $_GET['id'];              
 
 ?>
 
@@ -23,92 +25,68 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" style="text/css" href="test.css" />
+  <link rel="stylesheet" style="css" href="test.css" />
 </head>
 
 <body>
   <nav class="navbar navbar-dark bg-dark">
     <div class="container">
-      <ul class="nav navbar-nav navbar-right"> 
-        <a class="btn" style="color:white; transform: translateX(+1150px)"><i class="fa fa-user-circle-o" aria-hidden="true"></i><?php echo ' '.$_SESSION['pseudo']?></a>  <!-- affichage de la variable de session -->
+      <ul class="nav navbar-nav navbar-right">
+        <a class="btn" style="color:white; transform: translateX(+1150px)"><i class="fa fa-user-circle-o" aria-hidden="true"></i><?php echo ' '.$_SESSION['pseudo']?></a> <!-- affichage de la variable de session -->
       </ul>
-      <a class="btn" style="color:white; transform: translateX(+725px)" href="disconnect.php"><i class="fa fa-power-off fa-lg" aria-hidden="true"></i></button></a>
+      <a class="btn" style="color:white; transform: translateX(+725px)" href="disconnect.php"><i
+          class="fa fa-power-off fa-lg" aria-hidden="true"></i></button></a>
       <a class="btn" href="" style="background-color:#F7BE81; transform:  translateX(-1200px)">Toutapanne</a>
     </div>
   </nav>
   <img src="AC Rennes.jpg" height="200" width="200"><br><br><br><br><br><br>
-  <div id="container">
+  
+  <!--<div id="container">
     <input type="checkbox" id="water" />
     <label for="water">
       <div id="fill"></div>
     </label>
-  </div>
+  </div>-->
+
+  
 
   <h1 id="bob" class="display-3 text-center text-capitalize" style="transform: translateY(-165px) ">Toutapanne</h1>
+  <div id="arborescence" class="display-5 text-center text-capitalize" style="font-size: 26px;	transform:  translateY(-160px) ;"></div>
   <div class="py-5">
     <div class="container">
       <div class="row">
         <div class="col-md-12" style="	transform:  translateY(-100px) ;">
-          <h1 class="">Selectioner ce qui correspond a votre panne afin de determiner quel est votre panne.</h1>
+          <h1 class="">Sélectionnez ce qui correspond à votre panne afin de faciliter la réparation pour le technicien. Vous allez rentrer les informations pour le PC <?php echo $_SESSION['id']." qui est dans la salle ".$_SESSION['salle']."." ;?> </h1>
         </div>
-        <div class="col-md-12" style="	transform:  translateY(00px) ;">
-          <h4 class="">Votre panne est de type ?</h4>
+        
+        <div  class="col-md-12" style="	transform:  translateY(-25px) ;">
+          <h4 id="question" class="">Votre panne est de type ?</h4>
         </div>
 
       </div>
     </div>
-    <div class="container">                                        
-        <div class="dropdown">
-          <button type="button" class="btn btn-primary dropdown-toggle"href="#" style="background-color:#F7BE81" data-toggle="dropdown">
-            Choix
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Matériel</a>
-            <a class="dropdown-item" href="#">Logiciel</a>
-            <a class="dropdown-item" href="#">Reseaux</a>
+    <div class="container">
+      <div id="start">Commencer le questionnaire !</div>
+          <div id="quiz" style="display: none;">
+              <div id="question"></div>
+              <div id="qImg"></div>
+              <div id="choices">
+                  <div class="choice" id="A" onclick="checkAnswer('A')"></div>&nbsp;
+                  <div class="choice" id="B" onclick="checkAnswer('B')"></div>&nbsp;
+                  <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+              </div>
           </div>
-        </div>
+          <div id="scoreContainer" style="display: none"></div>
       </div>
-      <div class="py-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 "><a class="btn btn-primary w-25 rounded rounded-left mr-auto" href="#" style="background-color:#F7BE81;transform:  translatex(150%)">Valider</a></div>
-          </div>
-        </div>
-       <!-- <img src="bandeau bas.png" style="transform:  translateY(250px)"> -->
-      </div>
-  </div><br><br><br><br><br><br><br><br>
+    </div>
+  </div><br><br><br><br><br><br><br>
 
-<!--______________Bas de page________________-->
-<div class="bas_page container-fluid">
-	<ul>
-		<li><img src="img/logo_fld.png"></li>
-		<li>Lycée Félix Le Dantec<br>
-			Rue des Cordiers • BP 80349<br>
-			22303 Lannion cedex
-		</li>
-		<li class="num">Tel. 02 96 05 61 71</li>
-	</ul>
-	<ul class="label">
-		<li><h4>ETABLISSEMENT LABELISE</h4></li>
-		<li><img src="img/academie_rennes.png"></li>
-		<li><img src="img/logo-erasmus.png"></li>
-		<li><img src="img/logo_campus_blanc.png"></li>
-	</ul>
-	<ul class="contact">
-		<li><a href="contact.html" class="btn btn-secondary"><h5>CONTACT & ACCES</h5></a></li>
-	</ul>
-	<ul class="img_points">
-		<li><img src="img/points.png"></li>
-	</ul>
-</div>
-<!--______________Fin Bas de page________________-->
+  <!--______________Bas de page________________-->
+  <?php include('footer.html'); ?>
+  <!--______________Fin Bas de page________________-->
 
-
-
-
-<!--______________pied de page________________-->
-
+  <script src="mes_fonctions.js"></script>
   
 </body>
-  </html>
+
+</html>

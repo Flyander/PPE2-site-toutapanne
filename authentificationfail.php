@@ -24,7 +24,7 @@
       <div class="row">
         <div class="p-5 col-md-7 d-flex flex-column justify-content-center">
           <h3 class="display-4 mb-3" style="">Toutapanne<br></h3>
-          <p class="mb-4 lead">Toutapanne vous est proposez par Toutatice et vous permet de diagnostiquer les éventuelles pannes présente sur les PC d'une salle.<br>Connectez-vous tout d'abord avec votre compte Toutatice , puis ensuite choisisez la salle ou le PC est déffectueux et par la suite choisisez le type de salle dans lequel vous vous trouvez.<br>Suivez le questionaire qui vous précisera le type de votre panne.</p>
+          <p class="mb-4 lead">Toutapanne vous est proposé par Toutatice et vous permet de diagnostiquer les éventuelles pannes présente sur les PC d'une salle.<br>Connectez-vous tout d'abord avec votre compte Toutatice , puis ensuite choisisez la salle ou le PC est déffectueux et par la suite choisisez le type de salle dans lequel vous vous trouvez.<br>Suivez le questionaire qui vous précisera le type de votre panne.</p>
         </div>
         <div class="p-5 col-md-5" style="">
         <div class="alert alert-danger">
@@ -45,28 +45,7 @@
   <br><br><br><br><br><br>
 
 <!--______________Bas de page________________-->
-<div class="bas_page container-fluid">
-	<ul>
-		<li><img src="img/logo_fld.png"></li>
-		<li>Lycée Félix Le Dantec<br>
-			Rue des Cordiers • BP 80349<br>
-			22303 Lannion cedex
-		</li>
-		<li class="num">Tel. 02 96 05 61 71</li>
-	</ul>
-	<ul class="label">
-		<li><h4>ETABLISSEMENT LABELISE</h4></li>
-		<li><img src="img/academie_rennes.png"></li>
-		<li><img src="img/logo-erasmus.png"></li>
-		<li><img src="img/logo_campus_blanc.png"></li>
-	</ul>
-	<ul class="contact">
-		<li><a href="contact.html" class="btn btn-secondary"><h5>CONTACT & ACCES</h5></a></li>
-	</ul>
-	<ul class="img_points">
-		<li><img src="img/points.png"></li>
-	</ul>
-</div>
+<?php include('footer.html'); ?>
 <!--______________Fin Bas de page________________-->
 
 
