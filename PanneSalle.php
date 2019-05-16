@@ -8,8 +8,9 @@
     {
         $_SESSION['connecte']= 'pasok';  
     }				      
-    include("connexionbdd.php");              
+    include("connexionbdd.php");  
 
+    $_SESSION['salle'] = $_POST["salle"];
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +24,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" style="text/css" href="test.css" />
+  <link rel="stylesheet" style="text/css" href="test2.css" />
 </head>
 
 <body>
@@ -33,90 +34,30 @@
         <a class="btn" style="color:white; transform: translateX(+1150px)"><i class="fa fa-user-circle-o" aria-hidden="true"></i><?php echo ' '.$_SESSION['pseudo']?></a>  <!-- affichage de la variable de session -->
       </ul>
       <a class="btn" style="color:white; transform: translateX(+725px)" href="disconnect.php"><i class="fa fa-power-off fa-lg" aria-hidden="true"></i></button></a>
-      <a class="btn" href="" style="background-color:#F7BE81; transform:  left">Toutapanne</a>
+      <a class="btn" href="" style="background-color:#F7BE81; transform:  translateX(-1200px)">Toutapanne</a>
     </div>
   </nav>
   <img src="AC Rennes.jpg" height="200" width="200"><br><br><br><br><br><br>
-  <div id="container">
-    <input type="checkbox" id="water" />
-    <label for="water">
-      <div id="fill"></div>
-    </label>
-  </div>
-
-  <h1 id="bob" class="display-3 text-center text-capitalize" style="transform: translateY(-165px) ">Toutapanne</h1>                   
-  <div class="py-5">
-    <div class="container">
-      <div class="row">
-      <ul>
-        <li><a href="#">PC 1</a></li>
-        <li><a href="#">PC 2</a></li>
-      </ul>
-     
-      <ul>
-        <li><a href="#">PC 3</a></li>
-        <li><a href="#">PC 4</a></li>
-      </ul>
-      <ul>
-        <li><a href="#">PC 5</a></li>
-        <li><a href="#">PC </a></li>
-      </ul>
-      <ul>
-        <li><a href="#">PC 7</a></li>
-        <li><a href="#">PC 8</a></li>
-      </ul>
-      <ul>
-        <li><a href="#">PC 9</a></li>
-        <li><a href="#">PC 10</a></li>
-      </ul>
-      <ul>
-        <li><a href="#">PC 11</a></li>
-        <li><a href="#">PC 12</a></li>
-      </ul>
-      <ul>
-        <li><a href="#">PC 13</a></li>
-        <li><a href="#">PC 14</a></li>
-      </ul>
-      <ul>
-        <li><a href="#">PC 15</a></li>
-        <li><a href="#">PC 16</a></li>
-      </ul>
-      <ul>
-        <li><a href="#">PC 17</a></li>
-        <li><a href="#">PC 18</a></li>
-      </ul>
-      <ul>
-        <li><a href="#">PC 19</a></li>
-        <li><a href="#">PC 20</a></li>
-      </ul>
-    </div>
+  <h1 id="bob" class="display-3 text-center text-capitalize" style="transform: translateY(-115px) ">Toutapanne</h1>                   
+  
+  <?php
+    if ($_SESSION['salle'] == "B321")
+    {
+        include('ModelSalle/ModelSalle1.php');
+    } ?>
   
   </div><br><br><br><br><br><br><br><br>
 
-<!--______________Bas de page________________-->
-<div class="bas_page container-fluid">
-	<ul>
-		<li><img src="img/logo_fld.png"></li>
-		<li>Lycée Félix Le Dantec<br>
-			Rue des Cordiers • BP 80349<br>
-			22303 Lannion cedex
-		</li>
-		<li class="num">Tel. 02 96 05 61 71</li>
-	</ul>
-	<ul class="label">
-		<li><h4>ETABLISSEMENT LABELISE</h4></li>
-		<li><img src="img/academie_rennes.png"></li>
-		<li><img src="img/logo-erasmus.png"></li>
-		<li><img src="img/logo_campus_blanc.png"></li>
-	</ul>
-	<ul class="contact">
-		<li><a href="contact.html" class="btn btn-secondary"><h5>CONTACT & ACCES</h5></a></li>
-	</ul>
-	<ul class="img_points">
-		<li><img src="img/points.png"></li>
-	</ul>
-</div>
-<!--______________Fin Bas de page________________-->
+  <?php
+    if ($_SESSION['salle'] == "B322")
+    {
+        include('ModelSalle/ModelSalle2.php');
+    } ?>
+  </div><br><br><br><br><br><br><br><br>
+
+
+ 
+
 
 
 
