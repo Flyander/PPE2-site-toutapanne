@@ -9,7 +9,8 @@
         $_SESSION['connecte']= 'pasok';  
     }
     include("connexionbdd.php");
-                
+     
+    $_SESSION['id_panne'] = $_POST['valeur'];              
 
 ?>
 
@@ -53,30 +54,22 @@
   <div id="arborescence" class="display-5 text-center text-capitalize" style="font-size: 26px;	transform:  translateY(-160px) ;"></div>
 
   <div class="container">
-  <form action="insertionCompteProf.php" class="was-validated" method="post">
+  <form action="resoudreTraitement.php" class="was-validated" method="post">
     <div class="form-group">
-      <label for="identifiant">Identifiant:</label>
-      <input type="text" class="form-control" id="identifiant" placeholder="Entrez l'identifiant" name="identifiant" required>
+      <label for="heure">Temps de main d'oeuvre:</label>
+      <input type="time" class="form-control" id="heure"  name="heure" required>
       <div class="valid-feedback">*Valide</div>
-      <div class="invalid-feedback">*L'identifiant doit être sous la forme prenom.nom</div>
+      <div class="invalid-feedback">*Champ non rempli</div>
     </div>
     <div class="form-group">
-      <label for="password">Mot de passe:</label>
-      <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
-      <div class="valid-feedback">*Valide.</div>
-      <div class="invalid-feedback">*Le mot de passe doit être la date de naissance du professeur sour la forme '12/11/2000' sans les slash</div>
-    </div>
-    <div class="form-group form-check">
-      <label class="form-check-label">
-        <input class="form-check-input" type="checkbox" name="remember" required> Veuillez accepter les conditions générales d'utilisation.
-        <div class="valid-feedback">*Valide</div>
-        <div class="invalid-feedback">*Il faut cocher la case</div>
-      </label>
+      <label for="cout">Côut total de la résolution de la panne:</label>
+      <input type="text" class="form-control" id="cout" name="cout" required>
+      <div class="valid-feedback">Valide</div>
+      <div class="invalid-feedback">*Champ non rempli</div>
     </div>
     <button type="submit" class="btn btn-primary">Envoyer</button>
   </form>
 </div>
-
 
   <br><br><br><br><br><br><br>
 

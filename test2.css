@@ -29,6 +29,11 @@ li.section {
    margin: 8px auto;
 }
 
+h2{
+  text-align: center;
+  color: red;
+}
+
 li.section:before {
   content: 'x';
   position: absolute;

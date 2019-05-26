@@ -7,10 +7,9 @@
     else
     {
         $_SESSION['connecte']= 'pasok';  
-    }				      
-    include("connexionbdd.php");  
+    }
+    include("connexionbdd.php");             
 
-    $_SESSION['salle'] = $_POST["salle"];
 ?>
 
 <!DOCTYPE html>
@@ -24,47 +23,40 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" style="text/css" href="test2.css" />
+  <link rel="stylesheet" style="css" href="choixCSS.css" />
 </head>
 
 <body>
   <nav class="navbar navbar-dark bg-dark">
     <div class="container">
-      <ul class="nav navbar-nav navbar-right"> 
-        <a class="btn" style="color:white; transform: translateX(+1150px)"><i class="fa fa-user-circle-o" aria-hidden="true"></i><?php echo ' '.$_SESSION['pseudo']?></a>  <!-- affichage de la variable de session -->
+      <ul class="nav navbar-nav navbar-right">
+        <a class="btn" style="color:white; transform: translateX(+1150px)"><i class="fa fa-user-circle-o" aria-hidden="true"></i><?php echo ' '.$_SESSION['pseudo']?></a> <!-- affichage de la variable de session -->
       </ul>
       <a class="btn" style="color:white; transform: translateX(+725px)" href="disconnect.php"><i class="fa fa-power-off fa-lg" aria-hidden="true"></i></button></a>
       <a class="btn" href="" style="background-color:#F7BE81; transform:  translateX(-1200px)">Toutapanne</a>
     </div>
-  </nav>
-  <img src="AC Rennes.jpg" height="200" width="200"><br><br><br><br><br><br>
-  <h1 id="bob" class="display-3 text-center text-capitalize" style="transform: translateY(-115px) ">Toutapanne</h1>                   
+    </nav>
   
-  <?php
-    if ($_SESSION['salle'] == "B321")
-    {
-        include('ModelSalle/ModelSalle1.php');
-    }
-    elseif ($_SESSION['salle'] == "B322")
-    {
-        include('ModelSalle/ModelSalle2.php');
-    }
-    else
-    {
-      ?><h2>Ce modèle de salle n'est pas encore disponible, merci de votre comprehension</h2>
-    <?php }  ?>
+    <div class="row no-gutters">
+        <div class="col-md-6 no-gutters">
+            
+            <div class="leftside d-flex justify-content-center align-items-center" ><a id="lien" href="inscriptionProf.php">Ajouter un nouveau professeur</a></div>
+        </div>
+
+        <div class="col-md-6 no-gutters">
+            <div class="rightside d-flex justify-content-center align-items-center" ><a id="lien" href="ChoixSalle.php">Gestion des pannes</a></div>
+        </div>
+    </div>
+
+
+  </div>
+
+  <!--______________Bas de page________________-->
   
-  </div><br><br><br><br><br><br><br><br>
+  <!--______________Fin Bas de page________________-->
 
-
- 
-
-
-
-
-
-<!--______________pied de page________________-->
-
+  <script src="mes_fonctions.js"></script>
   
 </body>
-  </html>
+
+</html>

@@ -45,7 +45,7 @@
         <div class="col-md-12"> 
           <h4>Choisissez le numéro de la salle dans lequel vous vous trouver.</h4>
           <form action="PanneSalle.php" method="post">
-            <select name="salle" size="1">
+            <select name="salle" class="custom-select" size="1">
               <option value="B101">B101</option>
               <option value="B214">B214</option>
               <option value="B322">B322</option>

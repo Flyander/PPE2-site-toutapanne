@@ -76,6 +76,50 @@ li.section.visited.current:before {
 }
 
 
+.leftside, .rightside {
+  height: 50vh;
+  width: 100%;
+  color: orange;
+  font-weight: bold;
+	font-size:40px;
+}
+
+@media screen and (min-width:768px){
+  .leftside, .rightside {
+    height: 100vh;
+  }
+}
+
+.leftside {
+  background-image: url(img/school.png);
+  background-size: cover;  
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+  transition-delay: 0.5s;
+  opacity: 0.4;
+}
+
+.rightside {
+  background-image: url(img/blueprint.jpg);
+  background-size: cover; 
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+  transition-delay: 0.5s;
+  opacity: 0.4;
+}
+
+.rightside:hover{
+  background-position : xem yem;
+  opacity: 1;
+}
+
+.leftside:hover{
+  background-position : xem yem;
+  opacity: 1;
+}
+
 
 
 /*------------------pied de page------------------*/
@@ -103,3 +147,11 @@ div.pied{
 }
 
 /*------------------fin pied de page------------------*/
+
+#lien  {
+  color: orange;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}

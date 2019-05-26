@@ -54,6 +54,9 @@
 
   <div class="container">
   <form action="insertionCompteProf.php" class="was-validated" method="post">
+    <div class="alert alert-danger">
+          <strong>Attention!</strong> Le mot de passe doit contenir une majuscule et faire au moins 8 caractères.
+        </div>
     <div class="form-group">
       <label for="identifiant">Identifiant:</label>
       <input type="text" class="form-control" id="identifiant" placeholder="Entrez l'identifiant" name="identifiant" required>

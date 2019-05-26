@@ -65,6 +65,6 @@
         $insertion->bindParam(':id_prof', $id_prof);
 
         $succes=$insertion->execute();
-
+        //include("testmail.php");
     }
 ?>

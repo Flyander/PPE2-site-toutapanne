@@ -21,22 +21,68 @@ let questions = [
         question : "Votre panne est de type ?",
         choiceA : "Materielle",
         choiceB : "Logiciel",
-        choiceC : "Reseau",
+        choiceC : "Reseau",  
         correct : "A"
     },{
-        question : "What does CSS stand for?",
-        choiceA : "Wrong",
-        choiceB : "Correct",
-        choiceC : "Wrong",
+        question : "Quel périphérique ne fonctionne pas ?",
+        choiceA : "Souris",
+        choiceB : "Clavier",
+        choiceC : "Ecran",
         correct : "B"
     },{
-        question : "What does JS stand for?",
-        choiceA : "Wrong",
-        choiceB : "Wrong",
-        choiceC : "Correct",
+        question : "Quel composant semble cassé ?",
+        choiceA : "cable",
+        choiceB : "Les touches",
+        choiceC : "Autre",
         correct : "C"
     }
 ];
+
+let questionsLogi = [
+    {
+        question : "Votre panne est de type ?",
+        choiceA : "Materielle",
+        choiceB : "Logiciel",
+        choiceC : "Reseau",  
+        correct : "A"
+    },{
+        question : "Quelle est votre problème ?",
+        choiceA : "Stockage plein",
+        choiceB : "Logiciel non installe",
+        choiceC : "Windows ne fonctionne plus",
+        correct : "B"
+    },{
+        question : "Quelle est le problème du Windows ?",
+        choiceA : "Impossible de lancer une session",
+        choiceB : "Le windows ne demarre pas au lancement du PC",
+        choiceC : "Autre",
+        correct : "C"
+    }
+];
+
+let questionsReseau = [
+    {
+        question : "Votre panne est de type ?",
+        choiceA : "Materielle",
+        choiceB : "Logiciel",
+        choiceC : "Reseau",  
+        correct : "A"
+    },{
+        question : "Quelle est le probleme ?",
+        choiceA : "Pas de connexion",
+        choiceB : "Réseau lent",    
+        choiceC : "autre",
+        correct : "B"
+    },{
+        question : "Avez-vous essayé de débrancher/rebrancher le cable réseau ?",
+        choiceA : "Oui",
+        choiceB : "Non",
+        choiceC : "Non",
+        correct : "C"
+    }
+];
+
+
 
 // create some variables
 
@@ -52,6 +98,24 @@ let score = 0;
 // render a question
 function renderQuestion(){
     let q = questions[runningQuestion];
+    
+    question.innerHTML = "<p>"+ q.question +"</p>";
+    choiceA.innerHTML = q.choiceA;
+    choiceB.innerHTML = q.choiceB;
+    choiceC.innerHTML = q.choiceC;
+}
+
+function renderQuestionLogi(){
+    let q = questionsLogi[runningQuestion];
+    
+    question.innerHTML = "<p>"+ q.question +"</p>";
+    choiceA.innerHTML = q.choiceA;
+    choiceB.innerHTML = q.choiceB;
+    choiceC.innerHTML = q.choiceC;
+}
+
+function renderQuestionRes(){
+    let q = questionsReseau[runningQuestion];
     
     question.innerHTML = "<p>"+ q.question +"</p>";
     choiceA.innerHTML = q.choiceA;
@@ -81,12 +145,21 @@ function renderProgress(){
 // counter render
 
 
-
+var type =0;
 // checkAnwer
 
 function checkAnswer(answer){
-    let q = questions[runningQuestion];
-    if( answer == questions[runningQuestion].correct){
+    let q;
+    if (type == 0 || type == 1){
+        q = questions[runningQuestion];
+    }
+    if (type == 2){
+        q = questionsLogi[runningQuestion];
+    }
+    if (type == 3){
+        q = questionsReseau[runningQuestion];
+    }
+    if( answer == q.correct){
         // answer is correct
         // change progress color to green
         score++;
@@ -125,7 +198,36 @@ function checkAnswer(answer){
     count = 0;
     if(runningQuestion < lastQuestion){
         runningQuestion++;
-        renderQuestion();
+        if (runningQuestion == 1) {
+            if (answer == "A")
+            {
+                renderQuestion();
+                type = 1;
+            }
+            if (answer == "B")
+            {
+                renderQuestionLogi();
+                type = 2;
+            }
+            if (answer == "C")
+            {
+                renderQuestionRes();
+                type = 3;
+            }
+        }
+        else{
+            if (type == 1){
+                renderQuestion();
+            }
+            if (type == 2){
+                renderQuestionLogi();
+            }
+            if (type == 3){
+                renderQuestionRes();
+            }
+            
+        }
+        //renderQuestion();
     }else{
         // end the quiz and show the score
         clearInterval(TIMER);

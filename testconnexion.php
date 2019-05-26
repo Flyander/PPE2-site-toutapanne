@@ -27,7 +27,9 @@
                 echo "Valide";
                 $_SESSION['pseudo'] = $identifiant;
                 $_SESSION['connecte']='ok';
-                header('Location: ChoixPanneAdmin.php');
+                $_SESSION['type'] = "Admin";
+                $_SESSION['id_tech'] = $Results["id"];
+                header('Location: choixAction.php');
                 $test2 = true;
             }
             elseif ($Results["type"] == "Prof" && $validPassword == true)
@@ -35,6 +37,7 @@
                 session_start();
                 echo "Valide";
                 $_SESSION['pseudo'] = $identifiant;
+                $_SESSION['type'] = "Prof";
                 $_SESSION['id_prof'] = $Results["id"];
                 $_SESSION['connecte']='ok';
                 header('Location: ChoixSalle.php');

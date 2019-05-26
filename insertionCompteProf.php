@@ -12,7 +12,7 @@
         $NewPassword = password_hash($password, PASSWORD_DEFAULT); // cryptage du mot de passe
 
         $insertion = $connexion->prepare('INSERT INTO `prof`(`identifiant_P`, `mdp_P`) VALUES (:identifiant, :NewPassword)');
-        $sql = "SELECT COUNT(identifiant_P) AS result FROM compte WHERE identifiant_P = :identifiant"; //préparation de la requete SQL
+        $sql = $connexion->prepare("SELECT COUNT(identifiant_P) AS result FROM compte WHERE identifiant_P = :identifiant"); //préparation de la requete SQL
        // $stmt = $connexion->prepare($sql);
         
 
@@ -23,8 +23,8 @@
         $insertion->bindParam(':NewPassword', $NewPassword);
        // $stmt->bindParam(':email2', $email);
 
-        $stmt->execute();
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);  //programmation objet et Récupère une ligne de résultat sous forme de tableau associatif
+        $sql->execute();
+        $row = $sql->fetch(PDO::FETCH_ASSOC);  //programmation objet et Récupère une ligne de résultat sous forme de tableau associatif
 
         if($row['result'] > 0){ // si deja un identifiant
             die('L\'identifiant saisie est déjà utilisé!'); //changement de page vers une nouvelle page qui affiche le message si contre
